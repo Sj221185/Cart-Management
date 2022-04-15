@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CART MANAGEMENT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="listar()">
+    <h1><center>Operations List</center></h1>
+    <h2><center>Create,Update,Read and Delete</center></h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Product ID</label>
+                    <input type="text" class="form-control" id="txtDocumento">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" id="txtNombre">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" id="txtCorreo">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Color</label>
+                    <input type="color" class="form-control" id="txtColor">
+                </div>
+            </div>
+            <input type="hidden" id="txtId">
+            <div class="col-12">
+                <button id="btnGuardar" type="button" class="btn btn-success float-right" onclick="guardar()">Save</button>
+                <button id="btnModificar" style="display:none" type="button" class="btn btn-warning float-right" onclick="modificar()">Edit</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Color</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody id="tblDatos">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/app3.js"></script>
+</body>
+
+</html>
